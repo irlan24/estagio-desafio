@@ -65,7 +65,7 @@ def Matematica(strArr):
 
 # keep this function call here 
 
-entrada= [-4, 'Olá mundo', 'Tchau Mundo', '1 mundo', 'Primeiro mundo']
+entrada= [4, 'Olá mundo', 'Tchau Mundo', '1 mundo', 'Primeiro mundo']
 
 print(Matematica(entrada))
 
