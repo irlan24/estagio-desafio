@@ -42,10 +42,11 @@
 
 
 def Matematica(strArr):
-    separa_paralavra = []           # 0 < Número máximo de entradas <= 100
-    if strArr[0] < 1 or strArr[0] > 100:        
+               
+    if strArr[0] < 1 or strArr[0] > 100:        # 0 < Número máximo de entradas <= 100
         print('Numero de entrada nao permitida!')
 
+    separa_paralavra = []
     for palavra in strArr[1:]:      # 0 < Número máximo de palavras em uma frase < 100 
         separa_paralavra.append(len(palavra.split()))        
     if max(separa_paralavra) > 100:
