@@ -1,1 +1,1 @@
-else
+len(palavra.split())

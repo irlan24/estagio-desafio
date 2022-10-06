@@ -42,17 +42,17 @@
 
 
 def Matematica(strArr):
-               
-    if strArr[0] < 1 or strArr[0] > 100:        # 0 < Número máximo de entradas <= 100
-        print('Numero de entrada nao permitida!')
-
     separa_paralavra = []
-    for palavra in strArr[1:]:      # 0 < Número máximo de palavras em uma frase < 100 
-        separa_paralavra.append(len(palavra.split()))        
-    if max(separa_paralavra) > 100:
+    for palavra in strArr[1:]:       
+        separa_paralavra.append(len(palavra.split()))  
+
+    if strArr[0] < 1 or strArr[0] > 100:      # 0 < Número máximo de entradas <= 100  
+        print('Numero de entrada nao permitida!')    
+            
+    elif max(separa_paralavra) > 4:     # 0 < Número máximo de palavras em uma frase < 100
         print('Numero de palavras na frase ultrapassado!')
 
-    else:
+    else:   # Execução do código principal
         formatacao = ';'.join((strArr)[1:]).split(';')
         # print(formatacao)
 
@@ -78,28 +78,27 @@ print(Matematica(entrada))
 
 
 
-# def codigo(frase):    
-#         separa_paralavra = []
-#         if frase[0] < 1 or frase[0] > 100:      # 0 < Número máximo de entradas <= 100
-#             print('Numero de entrada nao permitida')
-#         for palavra in frase[1:]:       # 0 < Número máximo de palavras em uma frase < 100         
-#                 separa_paralavra.append(len(palavra.split()))
-#                 print(separa_paralavra)
-#         if max(separa_paralavra) > 5:
-#                 print('Numero de palavras na frase ultrapassado')
+# def codigo(frase):
+#     separa_paralavra = []
+#     for palavra in frase[1:]:       
+#         # separa_paralavra.append(new_func(palavra))
+#         separa_paralavra.append(len(palavra.split()))
+#         print(separa_paralavra)
 
+#     if frase[0] < 1 or frase[0] > 100:        # 0 < Número máximo de entradas <= 100  
+#         print('Numero de entrada nao permitida')    
 
+#     elif max(separa_paralavra) > 4:       # 0 < Número máximo de palavras em uma frase < 100
+#         print('Numero de palavras na frase ultrapassado')    
 
-#         else:            
-#             return frase[1:]
+#     else:            
+#         return frase[1:] 
 
+         
             
-            
-            
-        
+                    
  
 # teste = [4, 'Olá mundo', 'Primeiro mundo', '1 mundo i i i ', 'Tchau mundo']
-
 
 # print(codigo(teste))           
         
