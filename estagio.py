@@ -41,33 +41,33 @@
 
 
 
-def Matematica(strArr):
-    separa_paralavra = []
-    for palavra in strArr[1:]:       
-        separa_paralavra.append(len(palavra.split()))  
+# def Matematica(strArr):
+#     separa_paralavra = []
+#     for palavra in strArr[1:]:       
+#         separa_paralavra.append(len(palavra.split()))  
 
-    if strArr[0] < 1 or strArr[0] > 100:      # 0 < Número máximo de entradas <= 100  
-        print('Numero de entrada nao permitida!')    
+#     if strArr[0] < 1 or strArr[0] > 100:      # 0 < Número máximo de entradas <= 100  
+#         print('Numero de entrada nao permitida!')    
             
-    elif max(separa_paralavra) > 4:     # 0 < Número máximo de palavras em uma frase < 100
-        print('Numero de palavras na frase ultrapassado!')
+#     elif max(separa_paralavra) > 100:     # 0 < Número máximo de palavras em uma frase < 100
+#         print('Numero de palavras na frase ultrapassado!')
 
-    else:   # Execução do código principal
-        formatacao = ';'.join((strArr)[1:]).split(';')
-        # print(formatacao)
+#     else:   # Execução do código principal
+#         formatacao = ';'.join((strArr)[1:]).split(';')
+#         # print(formatacao)
 
-        newStrArr = ''
-        for frase in formatacao:                
-            reversao = ' '.join(frase.split()[::-1]) + ';'        
-            # print(reversao)
-            newStrArr += reversao    
-        return newStrArr
+#         newStrArr = ''
+#         for frase in formatacao:                
+#             reversao = ' '.join(frase.split()[::-1]) + ';'        
+#             # print(reversao)
+#             newStrArr += reversao    
+#         return newStrArr.strip()
 
-# keep this function call here 
+# # keep this function call here 
 
-entrada= [4, 'Olá mundo', 'Tchau Mundo', '1 mundo', 'Primeiro mundo']
+# entrada= [4, 'Olá mundo', 'Tchau Mundo', '1 mundo', 'Primeiro mundo']
 
-print(Matematica(entrada))
+# print(Matematica(entrada))
 
 # ============================= FIM DO CODIGO ======================================
 
@@ -80,35 +80,38 @@ print(Matematica(entrada))
 
 # def codigo(frase):
 #     separa_paralavra = []
+    
 #     for palavra in frase[1:]:       
 #         # separa_paralavra.append(new_func(palavra))
 #         separa_paralavra.append(len(palavra.split()))
-#         print(separa_paralavra)
+        
+
 
 #     if frase[0] < 1 or frase[0] > 100:        # 0 < Número máximo de entradas <= 100  
 #         print('Numero de entrada nao permitida')    
 
 #     elif max(separa_paralavra) > 4:       # 0 < Número máximo de palavras em uma frase < 100
-#         print('Numero de palavras na frase ultrapassado')    
+#         print('Numero de palavras na frase ultrapassado') 
 
 #     else:            
 #         return frase[1:] 
-
-         
+      
             
-                    
- 
-# teste = [4, 'Olá mundo', 'Primeiro mundo', '1 mundo i i i ', 'Tchau mundo']
+# teste = [4, 'Olá mundo', 'Primeiro mundo', '1 mundo', 'Tchau mundo']
 
 # print(codigo(teste))           
         
             
             
-        
+def test(ok):
+    news = ','.join(ok)
+
+    return news
 
 
+teste = ['Olá mundo', 'Primeiro mundo', '1 mundo', 'Tchau mundo']
+print(test(teste))
 
-    
         
 
 
