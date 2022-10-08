@@ -104,12 +104,31 @@
             
             
 def test(ok):
-    news = ','.join(ok)
 
-    return news
+    new = []
+    for frase in ok:        
+        if ' ' in frase:
+            palavra = frase.replace(' ', '')
+            new.append(palavra.isalpha())
+        else:
+            new.append(frase.isalpha())
+    
+    for i in new: 
+        print(i)
+        if False in new:
+            ok[new.index(False,0,-1)] = 'MATEMATICA'
+    
+    return ok
+
+        
 
 
-teste = ['Olá mundo', 'Primeiro mundo', '1 mundo', 'Tchau mundo']
+    
+
+
+
+
+teste = ['irlan', 'primeiro mundo', '1 mundo', 'Tchau mundo', '3 malucos']
 print(test(teste))
 
         
