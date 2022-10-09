@@ -41,35 +41,69 @@
 
 
 
-# def Matematica(strArr):
-#     separa_paralavra = []
-#     for palavra in strArr[1:]:       
-#         separa_paralavra.append(len(palavra.split()))  
+def Matematica(strArr):
+    separa_paralavra = []
+    for palavra in strArr[1:]:       
+        separa_paralavra.append(len(palavra.split()))  
 
-#     if strArr[0] < 1 or strArr[0] > 100:      # 0 < Número máximo de entradas <= 100  
-#         print('Numero de entrada nao permitida!')    
+    if strArr[0] < 1 or strArr[0] > 100:      # 0 < Número máximo de entradas <= 100  
+        print('Numero de entrada nao permitida!')    
             
-#     elif max(separa_paralavra) > 100:     # 0 < Número máximo de palavras em uma frase < 100
-#         print('Numero de palavras na frase ultrapassado!')
+    elif max(separa_paralavra) > 100:     # 0 < Número máximo de palavras em uma frase < 100
+        print('Numero de palavras na frase ultrapassado!')
 
-#     else:   # Execução do código principal
-#         formatacao = ';'.join((strArr)[1:]).split(';')
-#         # print(formatacao)
+    else:   # Execução do código principal
+        new = []    # Verificador de número na frase
+        Mat = []    # Nova Lista com substituição por MATEMATICA
+        for frase in strArr[1:]:
+            Mat.append(frase)                     
+            if ' ' in frase:            
+                palavra = frase.replace(' ', '')
+                new.append(palavra.isalpha())                
+            else:
+                new.append(frase.isalpha()) 
+        while False in new:
+            indice = new.index(False)
+            Mat[indice] = 'MATEMATICA'            
+            new[indice] = 'feito'
 
-#         newStrArr = ''
-#         for frase in formatacao:                
-#             reversao = ' '.join(frase.split()[::-1]) + ';'        
-#             # print(reversao)
-#             newStrArr += reversao    
-#         return newStrArr.strip()
+        formatacao = ';'.join(Mat).split(';')   #Formatação
+        # print(formatacao)
 
-# # keep this function call here 
+        newStrArr = ''
+        for frase in formatacao:                
+            reversao = ' '.join(frase.split()[::-1]) + ';'  #Reversão        
+            # print(reversao)
+            newStrArr += reversao    
+        return newStrArr.strip()
 
-# entrada= [4, 'Olá mundo', 'Tchau Mundo', '1 mundo', 'Primeiro mundo']
+# keep this function call here 
 
-# print(Matematica(entrada))
+entrada= [4, 'Olá mundo', 'Tchau 3Mundo', 'mundo', 'Primeiro mundo']
+
+print(Matematica(entrada))
 
 # ============================= FIM DO CODIGO ======================================
+# def test(ok):
+
+#     new = []    
+#     for frase in ok:        
+#         if ' ' in frase:            
+#             palavra = frase.replace(' ', '')
+#             new.append(palavra.isalpha())                
+#         else:
+#             new.append(frase.isalpha())    
+#     while False in new:
+#         indice = new.index(False)
+#         ok[indice] = 'MATEMATICA'
+#         new[indice] = 'feito' 
+    
+#     return ok
+
+        
+
+# teste = ['irlan', 'primeiro mundo', 'mundo', 'Tchau mundo', '3 malucos']
+# print(test(teste))
 
 
 
@@ -92,6 +126,7 @@
 
 #     elif max(separa_paralavra) > 4:       # 0 < Número máximo de palavras em uma frase < 100
 #         print('Numero de palavras na frase ultrapassado') 
+    
 
 #     else:            
 #         return frase[1:] 
@@ -103,36 +138,12 @@
         
             
             
-def test(ok):
 
-    new = []
-    for frase in ok:        
-        if ' ' in frase:
-            palavra = frase.replace(' ', '')
-            new.append(palavra.isalpha())
-        else:
-            new.append(frase.isalpha())
-    
-    for i in new: 
-        print(i)
-        if False in new:
-            ok[new.index(False,0,-1)] = 'MATEMATICA'
-    
-    return ok
 
         
-
-
-    
-
-
-
-
-teste = ['irlan', 'primeiro mundo', '1 mundo', 'Tchau mundo', '3 malucos']
-print(test(teste))
-
-        
-
+# if False in new:
+#         for i in range(tamanho):
+#             ok[new.index(False)] = 'MATEMATICA'
 
 
     
